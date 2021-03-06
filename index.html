@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Express HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <img src="/images/tom-jagger.jpg" style="margin: 20px; width: 10%" />
+    </div>
+    <div>
+      <img src="/images/tom-jagger.jpg" style="margin: 20px; width: 10%" />
+    </div>
+    <div>
+      <img src="/images/tom-jagger.jpg" style="margin: 20px; width: 10%" />
+    </div>
+    <div id="gb-ar-bast"
+     style="
+     position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          color: #17d4fe;
+          font-size: 60px;
+          font-family: Orbitron;
+          letter-spacing: 7px;
+        "
+    ></div>
+      <script>
+        console.log(`inside script tag`);
+        function run() {
+          var date = new Date();
+          var dateSwedish = new Intl.DateTimeFormat('sv-SV').format(date);
+          var timeSwedish = new Intl.DateTimeFormat('sv-SV', {timeStyle: 'medium'}).format(date);
+          document.getElementById("gb-ar-bast").innerHTML = dateSwedish + " " + timeSwedish;
+        }
+        setInterval(run, 1000);
+      </script>
+    </div>
+  </body>
+</html>
